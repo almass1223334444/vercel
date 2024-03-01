@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gifts</title>
+    <style>
+      body {
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      color: #f0f0f0;
+      font-weight: normal;
+      margin: 0;
+      padding: 0;
+      background: #eeeeee;
+      }
+      h2 {
+      background: #e0a608;
+      color: #000000;
+      text-align: center;
+      margin: 0 0 5% 0;
+      padding: 0.5em;
+      }
+      .cardBox {
+      float:left;
+      font-size: 1.2em;
+      margin: 1% 0 0 1%;
+      perspective: 800px;
+      transition: all 0.4s ease 0s;
+      width: 20%;
+      }
+      .cardBox:hover .card {
+      transform: rotateY(180deg);
+      }
+      .card {
+      background: #f0b505;
+      cursor: pointer;
+      height: 250px;
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease 0s;
+      width: 100%;
+      }
+      .card p {
+      margin-bottom: 1.8em;
+      }
+      .card .front,
+      .card .back {
+      backface-visibility: hidden;
+      box-sizing: border-box;
+      color: white;
+      display: block;
+      font-size: 1.2em;
+      height: 100%;
+      padding: 0.8em 0.7em;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      }
+      .card .front strong {
+      background: #fff;
+      border-radius: 100%;
+      color: #222;
+      font-size: 1.5em;
+      line-height: 30px;
+      padding: 0 7px 4px 6px;
+      }
+      .card .back {
+      transform: rotateY( 180deg);
+      }
+      .card .back a {
+      padding: 0.3em 0.5em;
+      background: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 1px;
+      font-size: 0.9em;
+      transition: all 0.2s ease 0s;
+      }
+      .card .back a:hover {
+      background: #fff;
+      color: #333;
+      text-shadow: 0 0 1px #333;
+      }
+      .cardBox:nth-child(1) .card .back {
+      background: #ffcc00;
+      }
+      .cardBox:nth-child(2) .card .back {
+      background: #1c87c9;
+      }
+      .cardBox:nth-child(3) .card .back {
+      background: #ff6347;
+      }
+      .cardBox:nth-child(4) .card .back {
+      background: #8ebf42;
+      }
+      .cardBox:nth-child(2) .card {
+      -webkit-animation: giro 1.5s 1;
+      animation: giro 1.5s 1;
+      }
+      .cardBox:nth-child(3) .card {
+      -webkit-animation: giro 2s 1;
+      animation: giro 2s 1;
+      }
+      .cardBox:nth-child(4) .card {
+      -webkit-animation: giro 2.5s 1;
+      animation: giro 2.5s 1;
+      }
+      @-webkit-keyframes giro {
+      from {
+      transform: rotateY(180deg);
+      }
+      to {
+      transform: rotateY(0deg);
+      }
+      }
+      @keyframes giro {
+      from {
+      transform: rotateY(180deg);
+      }
+      to {
+      transform: rotateY(0deg);
+      }
+      }
+      @media screen and (max-width: 767px) {
+      .cardBox {
+      margin-left: 2.8%;
+      margin-top: 3%;
+      width: 46%;
+      }
+      .card {
+      height: 285px;
+      }
+      .cardBox:last-child {
+      margin-bottom: 3%;
+      }
+      }
+      @media screen and (max-width: 480px) {
+      .cardBox {
+      width: 94.5%;
+      }
+      .card {
+      height: 260px;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Happy Birthday</h2>
+    <div class="boxesContainer">
+      <div class="cardBox">
+        <div class="card">
+          <div class="front">
+            <h3>Gift 1</h3>
+            <p></p>
+            <strong>&#x21bb;</strong>
+          </div>
+          <div class="back">
+            <h3></h3>
+            <a href="images/book.jpg">Кнопка 1</a>
+          </div>
+        </div>
+      </div>
+      <div class="cardBox">
+        <div class="card">
+          <div class="front">
+            <h3>Gift 2</h3>
+            <p></p>
+            <strong>&#x21bb;</strong>
+          </div>
+          <div class="back">
+            <h3></h3>
+            <a href="images/termos.jpg">Кнопка 2</a>
+          </div>
+        </div>
+      </div>
+      <div class="cardBox">
+        <div class="card">
+          <div class="front">
+            <h3>Gift 3</h3>
+            <p></p>
+            <strong>&#x21bb;</strong>
+          </div>
+          <div class="back">
+            <h3></h3>
+           
+            <a href="images/sumka.jpg">Кнопка 3</a>
+          </div>
+        </div>
+      </div>
+      <div class="cardBox">
+        <div class="card">
+          <div class="front">
+            <h3>Gift 4</h3>
+            
+            <strong>&#x21bb;</strong>
+          </div>
+          <div class="back">
+            <h3></h3>
+            <a href="ai.html">Кнопка 4</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

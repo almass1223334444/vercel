@@ -1,0 +1,150 @@
+header {
+  background-color: #cd960b;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Дополнительные стили для слайдеров */
+.slider {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.slider img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.vid {
+  border: 5px solid;
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+}
+a{
+  color: #000000;
+  text-decoration: none;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Адаптация для мобильных устройств */
+@media only screen and (max-width: 768px) {
+  header {
+      padding: 15px;
+  }
+
+  nav {
+      padding: 5px;
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav li {
+      margin: 10px 0;
+  }
+
+  .slider {
+      width: 110%;
+  }
+
+  .vid {
+      width: 70%;
+  }
+}
+
+
+.gift-container {
+  position: relative;
+
+}
+
+.gift-box {
+  width: 100px;
+  height: 200px;
+  position: relative;
+  background-image:url("/images/chernaja-podarochnaja-korobka.png");
+  background-size: cover; 
+  background-position: center; 
+  height: 10vh; 
+  width: 40hv;
+  cursor: pointer;
+}
+
+
+
+#giftImage {
+  
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.box {
+  
+  background-color: transparent;
+  width: 220px;
+  height: 300px;
+  border: 1px solid #eeeeee;
+  perspective: 1000px;
+  }
+  .box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  }
+  .box:hover .box-inner {
+  transform: rotateY(180deg);
+  }
+  .box-front, .box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  }
+  .box-front {
+  background-color: #cccccc;
+  color: #111111;
+  }
+  .box-back {
+  background-color: #8ebf42;
+  color: #eeeeee;
+  transform: rotateY(180deg);
+  }
